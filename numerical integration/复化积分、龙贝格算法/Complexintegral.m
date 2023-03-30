@@ -3,7 +3,7 @@ syms x f(x) g(x);
 f(x) = x*sqrt(1+x^2);
 g(x) = diff(f,x,4);
 % % 插值 求出g(t)的最大值
- t = 0:1:3;
+ t = 0:0.001:3;
  m = max(abs(g(t)));
 % 复化simpson 公式 误差<10^(-4) 得出等分数n
 n = round(1+3/(2^4*(60*10^(-4)/double(m))));
