@@ -11,7 +11,7 @@ for i = 1:100
         end
     end
         if i >1
-            if (B(i,i)-B(i-1,i-1)) < 10^(-4)
+            if abs (B(i,i)-B(i-1,i-1)) < 10^(-4)
                 break;
             end
         end
