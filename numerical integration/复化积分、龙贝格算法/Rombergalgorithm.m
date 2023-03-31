@@ -2,7 +2,7 @@ syms x f(x);
  f(x) = x*sqrt(1+x^2);
  B = zeros(100,100);
 for i = 1:100
-    n = 2^(i);
+    n = 2^(i-1);
     k = 0:3/n:3;
     B(i,1) = 1/2*3/n*(2*sum(f(k))-f(0)-f(3));
     for j = 1:i;
